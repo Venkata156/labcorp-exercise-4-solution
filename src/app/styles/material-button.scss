@@ -1,0 +1,13 @@
+
+$btn-margin: 10px;
+$primary-color: #007AB8;
+
+.mat-button {
+  margin-right: $btn-margin !important;
+  margin-top: $btn-margin !important;
+}
+
+.increment-btn {
+  background-color: $primary-color;
+  color: white;
+}

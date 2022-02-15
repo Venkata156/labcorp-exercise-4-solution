@@ -1,0 +1,12 @@
+<ng-container *ngIf="(todos | async) as todosList">
+    <ng-container *ngIf="todosList?.length; else noTodosMsg">
+        <h3>There {{todosList.length === 1 ? 'is' : 'are'}} currently [{{todosList.length}}] {{todosList.length === 1 ? 'todo' : 'todos'}}</h3>
+    </ng-container>
+
+    <ng-template #noTodosMsg>
+        <h3>There are currently no todos</h3>
+    </ng-template>
+
+    <button mat-button class="increment-btn" (click)="incrementTodos()">Increment</button>
+    <button mat-raised-button (click)="decrementTodos()" [disabled]="!todosList.length">Decrement</button>
+</ng-container>
